@@ -19,13 +19,11 @@ function Login() {
 
       const token = response.data;
 
-      // Save token
       localStorage.setItem("token", token);
 
-      // Redirect after login
       navigate("/dashboard");
 
-    } catch (err: any) {
+    } catch (err) {
       setError("Invalid email or password");
     }
   };
@@ -72,7 +70,7 @@ const styles = {
     backgroundColor: "#f4f4f4",
   },
   form: {
-    background: "white",
+    background: "#fff",
     padding: "30px",
     borderRadius: "8px",
     display: "flex",
@@ -83,11 +81,12 @@ const styles = {
   input: {
     marginBottom: "15px",
     padding: "10px",
+    fontSize: "14px",
   },
   button: {
     padding: "10px",
     backgroundColor: "#007bff",
-    color: "white",
+    color: "#fff",
     border: "none",
     cursor: "pointer",
   },
